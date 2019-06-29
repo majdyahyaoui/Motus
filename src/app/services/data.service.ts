@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   start = false ;
-  motTab: string[] = ['lourent', 'tullier', 'lézarde', 'aciérez', 'chassât', 'boettez', 'messire', 'branche', 'licteur', 'cémenta'] ;
-  cpt: number;
+  motTab: string[] = ['lourent', 'tullier', 'lézarde', 'aciérez', 'chassât', 'boettez', 'messire', 'branche', 'licteur', 'cementa' ,''] ;
+  motActuelle ="" ;
   premierlettre: string;
   grille = [[["",""],["",""],["",""],["",""],["",""],["",""],["",""]],[["",""],["",""],["",""],["",""],["",""],["",""],["",""]]
           ,[["",""],["",""],["",""],["",""],["",""],["",""],["",""]] ,[["",""],["",""],["",""],["",""],["",""],["",""],["",""]]

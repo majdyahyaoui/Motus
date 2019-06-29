@@ -46,29 +46,23 @@ export class Bloc1Component implements OnInit {
 
   InitialiserParametre() {
     this.data.temps = 600;
-    console.log( this.data.temps)
     this.data.tempsParMot = 20;
-    console.log(this.data.tempsParMot)
     this.data.resultatMotReussi = 0;
-    console.log( this.data.resultatMotReussi)
 
   }
 
   InitialiserSolution(){
-    this.data.cpt = 0 ;
-    console.log( this.data.cpt)
-
+    this.data.nbMots = 0 ;
   }
+
   InitialiserSaisirMots() {
-    this.data.premierlettre = this.motTab[this.data.cpt][0];
-    console.log(this.data.premierlettre)
+    this.data.premierlettre = this.motTab[this.data.nbMots][0];
 
   }
   InitialiserGrille() {
     this.data.grille[0][0]=[this.data.premierlettre , "good"];
-    console.log(this.data.grille)
-
   }
+
   InitialiserAlphabet() {
     let a: string [][][] = [[['a',"exist"], ['b',"exist"], ['c',"exist"], ['d',"exist"] , ['e',"exist"], ['f',"exist"] ],
       [['g',"exist"], ['h',"exist"], ['i',"exist"], ['j',"exist"] , ['k',"exist"], ['l',"exist"] ],

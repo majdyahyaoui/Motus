@@ -25,11 +25,17 @@ export class Bloc2Component implements OnInit ,OnChanges{
   public decrementerTempsGlobal(temps : number)  {
 
     setInterval(
-      ()=> { temps--;
+      ()=> {
+        temps--;
       this.temps = Math.floor(temps / 60)+':'+Math.floor(temps % 60) ;
       },
       1 * 1000);
-    // this.data.finTemps = 1;
+      // if(this.data.resultatMotReussi >= 7){
+      //   alert("BRAVO");
+      // }
+      // else{
+      //   alert("A LA PROCHAINE")
+      // }
 
 
   }
