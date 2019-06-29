@@ -1,3 +1,9 @@
-<p>
-  alphabet works!
-</p>
+<div class="alph">
+  <div *ngIf="data">
+    <table>
+      <tr   *ngFor="let mot of data.alphabet">
+        <td class="{{lettre[1]}}" *ngFor="let lettre of mot" >{{lettre[0]}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

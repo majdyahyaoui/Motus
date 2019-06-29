@@ -2,7 +2,7 @@
   <form (ngSubmit)="essayer(form)" #form="ngForm">
     <p>
       <input [ngClass]="border" (input)="verifierMotaSept(input)"
-             type="text"  #input name="essai" ngModel>
+             type="text"  #input name="essai" ngModel  [placeholder]="data.premierlettre">
       <button type="submit"  >envoyer</button>
     </p>
   </form>

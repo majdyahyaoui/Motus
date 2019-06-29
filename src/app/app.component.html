@@ -4,5 +4,9 @@
 <Bloc2 [data]="data" ></Bloc2>
 <Bloc3 [data]="data"></Bloc3>
 <Bloc4 [data]="data"></Bloc4>
-<Bloc5 [data]="data"></Bloc5>
-<Grille [data]="data"></Grille>
+<Bloc5 (emetter5)="change5($event)" [data]="data"></Bloc5>
+<div >
+  <Grille [data]="data" ></Grille>
+  <Alphabet [data]="data" ></Alphabet>
+</div>
+

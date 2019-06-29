@@ -11,13 +11,13 @@ export class DataService {
   grille = [[["",""],["",""],["",""],["",""],["",""],["",""],["",""]],[["",""],["",""],["",""],["",""],["",""],["",""],["",""]]
           ,[["",""],["",""],["",""],["",""],["",""],["",""],["",""]] ,[["",""],["",""],["",""],["",""],["",""],["",""],["",""]]
           ,[["",""],["",""],["",""],["",""],["",""],["",""],["",""]]];
-  alphabet: string[] = [];
+  alphabet: string[][][] ;
   temps: number;
   tempsParMot: number;
   resultatMotReussi: number;
   finTemps: number;
   finTempsParMot: number;
-  nbEssais: number;
+  nbEssais: number =0;
   nbMots : number = 0;
 
   constructor() { }

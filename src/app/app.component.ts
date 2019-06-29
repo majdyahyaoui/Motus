@@ -9,7 +9,11 @@ import {Component, EventEmitter, Output} from '@angular/core';
 export class AppComponent {
   title = 'Motus';
   data : any ;
+
   change(data : any){
+    this.data = data ;
+  }
+  change5(data : any){
     this.data = data ;
   }
 }

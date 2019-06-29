@@ -70,7 +70,11 @@ export class Bloc1Component implements OnInit {
 
   }
   InitialiserAlphabet() {
-    let a: string [] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    let a: string [][][] = [[['a',"exist"], ['b',"exist"], ['c',"exist"], ['d',"exist"] , ['e',"exist"], ['f',"exist"] ],
+      [['g',"exist"], ['h',"exist"], ['i',"exist"], ['j',"exist"] , ['k',"exist"], ['l',"exist"] ],
+      [['m',"exist"], ['n',"exist"], ['o',"exist"], ['p',"exist"] , ['q',"exist"], ['r',"exist"] ],
+      [['s',"exist"], ['t',"exist"], ['u',"exist"], ['v',"exist"] , ['w',"exist"], ['x',"exist"] ] ,
+      [['y',"exist"], ['z',"exist"] ]];
     this.data.alphabet = a;
 
   }

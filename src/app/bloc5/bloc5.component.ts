@@ -1,5 +1,6 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {forEach} from '@angular/router/src/utils/collection';
 
 
 @Component({
@@ -9,6 +10,7 @@ import {NgForm} from '@angular/forms';
 })
 export class Bloc5Component implements OnInit {
   @Input() data : any ;
+  @Output() emetter5 = new EventEmitter<any>() ;
 
   border : string = "rouge" ;
   constructor() { }
@@ -18,26 +20,44 @@ export class Bloc5Component implements OnInit {
   // verifierMotaSept(string m){
   //
   // }
-
   essayer(form : NgForm){
     var essai = form.value.essai ;
+    this.afficherGrille(essai);
+    this.data.nbEssais ++ ;
+    this.emetter5.emit(this.data) ;
+  }
+
+  afficherGrille(essai : string){
     var mot = this.data.motTab[this.data.nbMots] ;
-    console.log(mot) ;
     for(var i = 0 ; i < essai.length ;i++){
       if(essai[i] == mot[i]){
-        this.data.grille[this.data.nbMots][i][0] = essai[i] ;
-        this.data.grille[this.data.nbMots][i][1] = "good" ;
+        this.data.grille[this.data.nbEssais][i][0] = essai[i] ;
+        this.data.grille[this.data.nbEssais][i][1] = "good" ;
+        this.data.alphabet.forEach(
+          function(value) {
+            value.forEach(function(value) {
+              if(value[0]== essai[i]){
+                value[1] = "inclue"}})})
       }
       else if(mot.indexOf(essai[i]) != -1){
-        this.data.grille[this.data.nbMots][i][0] = essai[i] ;
-        this.data.grille[this.data.nbMots][i][1] = "in" ;
+        this.data.grille[this.data.nbEssais][i][0] = essai[i] ;
+        this.data.grille[this.data.nbEssais][i][1] = "in" ;
+        this.data.alphabet.forEach(
+          function(value) {
+            value.forEach(function(value) {
+              if(value[0]== essai[i]){
+                value[1] = "inclue"}})})
       }
       else{
-        this.data.grille[this.data.nbMots][i][0] = essai[i] ;
-        this.data.grille[this.data.nbMots][i][1] = "not" ;
+        this.data.grille[this.data.nbEssais][i][0] = essai[i] ;
+        this.data.grille[this.data.nbEssais][i][1] = "not" ;
+        this.data.alphabet.forEach(
+          function(value) {
+            value.forEach(function(value) {
+              if(value[0]== essai[i]){
+                value[1] = "notExist"}})})
       }
     }
-    console.log(this.data)
 
   }
 
@@ -49,8 +69,6 @@ export class Bloc5Component implements OnInit {
 
   introduireMot(){}
 
-  afficherGrille(){
-  }
 
   verifierMotaSept(input : any){
     if(input.value.length == 7){
