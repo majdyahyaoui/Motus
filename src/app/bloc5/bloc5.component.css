@@ -15,3 +15,10 @@
   padding: 0px 0px 0px 30px;
   margin-top : 10px;
 }
+
+.rouge{
+  border : 2px solid red ;
+}
+.vert{
+  border : 2px solid green ;
+}

@@ -8,8 +8,9 @@ export class DataService {
   motTab: string[] = ['lourent', 'tullier', 'lézarde', 'aciérez', 'chassât', 'boettez', 'messire', 'branche', 'licteur', 'cémenta'] ;
   cpt: number;
   premierlettre: string;
-  grille = [["","","","","","",""],["","","","","","",""]
-          ,["","","","","","",""] ,["","","","","","",""],["","","","","","",""]];
+  grille = [[["",""],["",""],["",""],["",""],["",""],["",""],["",""]],[["",""],["",""],["",""],["",""],["",""],["",""],["",""]]
+          ,[["",""],["",""],["",""],["",""],["",""],["",""],["",""]] ,[["",""],["",""],["",""],["",""],["",""],["",""],["",""]]
+          ,[["",""],["",""],["",""],["",""],["",""],["",""],["",""]]];
   alphabet: string[] = [];
   temps: number;
   tempsParMot: number;
@@ -17,6 +18,7 @@ export class DataService {
   finTemps: number;
   finTempsParMot: number;
   nbEssais: number;
+  nbMots : number = 0;
 
   constructor() { }
 

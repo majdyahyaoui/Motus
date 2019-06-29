@@ -65,7 +65,7 @@ export class Bloc1Component implements OnInit {
 
   }
   InitialiserGrille() {
-    this.data.grille[0][0]=this.data.premierlettre;
+    this.data.grille[0][0]=[this.data.premierlettre , "good"];
     console.log(this.data.grille)
 
   }

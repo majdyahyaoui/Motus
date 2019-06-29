@@ -7,7 +7,7 @@
     height: 355px;
     padding : 5px 5px 5px 5px  ;
     border-radius: 10px 10px 10px 10px;
-    background-image: url("src/img/wood.jpg"); 
+    background-image: url("src/img/wood.jpg");
     background-size: cover;
     margin-top : 10px;
     margin-right: 20px;
@@ -15,4 +15,22 @@
 
 .para{
   font-weight: bold;
+}
+
+
+.in{
+  padding: 20px;
+  background-color: #FF8000  ;
+  border : 1px solid black ;
+}
+.good{
+  padding: 20px;
+  background-color:#007BA7 ;
+  boder : 1px solid black ;
+
+}
+.not{
+  padding: 20px;
+  border : 1px solid black ;
+
 }

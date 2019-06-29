@@ -1,5 +1,12 @@
 <div>
   <div class="Grille">
+    <div *ngIf="data">
+      <table>
+        <tr   *ngFor="let mot of data.grille">
+          <td class="{{lettre[1]}}" *ngFor="let lettre of mot" >{{lettre[0]}}</td>
+        </tr>
+      </table>
+    </div>
 
   </div>
   <p class="para">Grille</p>

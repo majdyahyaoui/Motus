@@ -1,8 +1,9 @@
 <div class="bloc5" *ngIf="data.start">
-  <form (ngSubmit)="envoyer()" >
+  <form (ngSubmit)="essayer(form)" #form="ngForm">
     <p>
-      <input [(ngModel)]="essai" type="text" >
-      <button type="submit" >envoyer</button>
+      <input [ngClass]="border" (input)="verifierMotaSept(input)"
+             type="text"  #input name="essai" ngModel>
+      <button type="submit"  >envoyer</button>
     </p>
   </form>
 
