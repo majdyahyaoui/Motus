@@ -9,6 +9,9 @@ export class DataService {
   premierlettre: string;
   grille: string[5][7];
   alphabet: string[] = [];
+  temps: number;
+  tempsParMot: number;
+  resultatMotReussi: number;
 
   constructor() { }
 

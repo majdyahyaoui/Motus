@@ -44,9 +44,9 @@ export class Bloc1Component implements OnInit {
   }
 
   InitialiserParametre() {
-    let temps: 600;
-    let tempsParMot: 20;
-    let resultatMotReussi = 0;
+    this.data.temps = 600;
+    this.data.tempsParMot = 20;
+    this.data.resultatMotReussi = 0;
   }
 
   InitialiserSolution(){
