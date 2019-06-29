@@ -4,10 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
+  start = false ;
   motTab: string[] = ['lourent', 'tullier', 'lézarde', 'aciérez', 'chassât', 'boettez', 'messire', 'branche', 'licteur', 'cémenta'] ;
   cpt: number;
   premierlettre: string;
-  grille: string[5][7];
+  grille = [["","","","","","",""],["","","","","","",""]
+          ,["","","","","","",""] ,["","","","","","",""],["","","","","","",""]];
   alphabet: string[] = [];
   temps: number;
   tempsParMot: number;

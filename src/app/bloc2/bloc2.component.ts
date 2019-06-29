@@ -1,25 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, Input, OnChanges, OnInit} from '@angular/core';
 import {DataService} from '../services/data.service';
 
 @Component({
-  selector: 'app-bloc2',
+  selector: 'Bloc2',
   templateUrl: './bloc2.component.html',
   styleUrls: ['./bloc2.component.css']
 })
-export class Bloc2Component implements OnInit {
-motReussi: number ;
-  constructor(private data: DataService, ) { }
+export class Bloc2Component implements OnInit ,OnChanges{
+  temps : string ;
+  @Input() data : any ;
+  constructor( ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+
   }
+
+  ngOnChanges(){
+    this.decrementerTempsGlobal(this.data.temps)
+  }
+
   public incrementerMotsReussi() {
-    this.motReussi += 1;
+    // this.motReussi += 1;
   }
-  public decrementerTempsGlobal() {
+  public decrementerTempsGlobal(temps : number)  {
+
     setInterval(
-      ()=> { this.data.temps--;
-      console.log(Math.floor(this.data.temps / 60)+':'+Math.floor(this.data.temps % 60)); }, 1 * 1000);
-    this.data.finTemps = 1;
+      ()=> { temps--;
+      this.temps = Math.floor(temps / 60)+':'+Math.floor(temps % 60) ;
+      },
+      1 * 1000);
+    // this.data.finTemps = 1;
+
+
   }
 
 }

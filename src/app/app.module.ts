@@ -10,6 +10,7 @@ import { Bloc2Component } from './bloc2/bloc2.component';
 import { Bloc3Component } from './bloc3/bloc3.component';
 import { Bloc5Component } from './bloc5/bloc5.component';
 import { AlphabetComponent } from './alphabet/alphabet.component';
+import { FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,13 @@ import { AlphabetComponent } from './alphabet/alphabet.component';
     Bloc2Component,
     Bloc3Component,
     Bloc5Component,
-    AlphabetComponent
+    AlphabetComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

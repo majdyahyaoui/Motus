@@ -2,14 +2,17 @@
     display: grid;
 
     border:1px solid black;
-    background:GhostWhite;
+    background-color:GhostWhite;
     width: 490px;
     height: 355px;
     padding : 5px 5px 5px 5px  ;
     border-radius: 10px 10px 10px 10px;
     background-image: url("src/img/wood.jpg"); 
     background-size: cover;
-    overflow: scroll; 
     margin-top : 10px;
     margin-right: 20px;
   }
+
+.para{
+  font-weight: bold;
+}

@@ -12,6 +12,6 @@
   width: 400px;
   height: 60px;
   background-image:  url("src/img/wood.jpg"); 
-  padding: 15px;
+  padding: 0px 0px 0px 30px;
   margin-top : 10px;
 }

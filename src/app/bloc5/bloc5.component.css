@@ -1,0 +1,17 @@
+.bloc5
+{
+  font-size: 25px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid black;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  width: 400px;
+  height: 60px;
+  background-image:  url("src/img/wood.jpg");
+  padding: 0px 0px 0px 30px;
+  margin-top : 10px;
+}

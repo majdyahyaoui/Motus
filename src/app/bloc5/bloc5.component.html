@@ -1,3 +1,9 @@
-<p>
-  bloc5 works!
-</p>
+<div class="bloc5" *ngIf="data.start">
+  <form (ngSubmit)="envoyer()" >
+    <p>
+      <input [(ngModel)]="essai" type="text" >
+      <button type="submit" >envoyer</button>
+    </p>
+  </form>
+
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {DataService} from '../services/data.service';
 
 @Component({
@@ -8,8 +8,9 @@ import {DataService} from '../services/data.service';
 })
 export class Bloc1Component implements OnInit {
 
+  @Output() emetter = new EventEmitter<any>() ;
+
   constructor(private data: DataService) { }
-  // motTab: string[] = ['lourent', 'tullier', 'lézarde', 'aciérez', 'chassât', 'boettez', 'messire', 'branche', 'licteur', 'cémenta'] ;
   motTab: string[];
 
   ngOnInit() {
@@ -26,6 +27,8 @@ export class Bloc1Component implements OnInit {
     this.InitialiserSaisirMots();
     this.InitialiserGrille();
     this.InitialiserAlphabet();
+    this.data.start = true ;
+    this.emetter.emit(this.data) ;
   }
 
   RemplacerCaractere() {
@@ -36,8 +39,6 @@ export class Bloc1Component implements OnInit {
         if ((this.motTab[i][j] === 'é' ) || (this.motTab[i][j] === mot + 'è' ) ) { mot = mot + 'e'; }
         else if ((this.motTab[i][j] === 'à' || this.motTab[i][j] === 'â' ) ) { mot = mot + 'a'; }
         else {mot = mot + this.motTab[i][j]; }
-
-
       }
       this.motTab[i] = mot;
     }
@@ -45,18 +46,28 @@ export class Bloc1Component implements OnInit {
 
   InitialiserParametre() {
     this.data.temps = 600;
+    console.log( this.data.temps)
     this.data.tempsParMot = 20;
+    console.log(this.data.tempsParMot)
     this.data.resultatMotReussi = 0;
+    console.log( this.data.resultatMotReussi)
+
   }
 
   InitialiserSolution(){
     this.data.cpt = 0 ;
+    console.log( this.data.cpt)
+
   }
   InitialiserSaisirMots() {
     this.data.premierlettre = this.motTab[this.data.cpt][0];
+    console.log(this.data.premierlettre)
+
   }
   InitialiserGrille() {
-    this.data.grille.replace(this.data.grille[0][0],this.data.premierlettre);
+    this.data.grille[0][0]=this.data.premierlettre;
+    console.log(this.data.grille)
+
   }
   InitialiserAlphabet() {
     let a: string [] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
