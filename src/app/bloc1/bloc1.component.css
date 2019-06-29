@@ -1,0 +1,21 @@
+.bloc1
+{
+  font-size: 25px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid black;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  outline: none;
+  width: 400px;
+  height: 60px;
+  color : white;
+  background-color :green;
+  padding: 14px;
+  margin-top : 10px;
+  cursor: pointer;
+  text-align: center;
+}
