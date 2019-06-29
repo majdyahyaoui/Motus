@@ -12,6 +12,9 @@ export class DataService {
   temps: number;
   tempsParMot: number;
   resultatMotReussi: number;
+  finTemps: number;
+  finTempsParMot: number;
+  nbEssais: number;
 
   constructor() { }
 

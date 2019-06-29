@@ -1,4 +1,18 @@
-
 <div class="bloc4">
-    Motus
-  </div>
+    <div *ngIf="this.data.nbEssais === 5 || this.data.finTempsParMot === 1">
+        Solution [ {{this.data.cpt + 1}} ]: {{this.data.motTab[this.data.cpt]}}
+    </div>
+
+
+    <div *ngIf="(this.data.finTemps === 1 || this.data.cpt === 10) && this.data.resultatMotReussi > 6; else notShow">
+
+        <p>Bravo !</p>
+
+
+    </div>
+    <ng-template #notShow>
+      <p>
+        A la prochaine
+      </p>
+    </ng-template>
+</div>

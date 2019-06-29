@@ -11,5 +11,4 @@ export class Bloc5Component implements OnInit {
 
   ngOnInit() {
   }
-
 }

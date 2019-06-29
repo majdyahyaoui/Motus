@@ -16,5 +16,6 @@ export class Bloc3Component implements OnInit {
     setInterval(
       ()=> { this.data.tempsParMot--;
         console.log(Math.floor(this.data.tempsParMot % 60)); }, 1 * 1000);
+    this.data.finTempsParMot = 1;
   }
 }

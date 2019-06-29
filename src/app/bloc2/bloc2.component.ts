@@ -8,7 +8,7 @@ import {DataService} from '../services/data.service';
 })
 export class Bloc2Component implements OnInit {
 motReussi: number ;
-  constructor(private data: DataService ,) { }
+  constructor(private data: DataService, ) { }
 
   ngOnInit() {
   }
@@ -19,6 +19,7 @@ motReussi: number ;
     setInterval(
       ()=> { this.data.temps--;
       console.log(Math.floor(this.data.temps / 60)+':'+Math.floor(this.data.temps % 60)); }, 1 * 1000);
+    this.data.finTemps = 1;
   }
 
 }
