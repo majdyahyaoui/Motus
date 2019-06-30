@@ -16,9 +16,7 @@ export class Bloc1Component implements OnInit {
   ngOnInit() {
     this.motTab = this.data.motTab;
     this.RemplacerCaractere();
-    console.log(this.motTab);
     this.InitialiserAlphabet();
-    console.log(this.data.alphabet);
   }
   jouer(){
     this.RemplacerCaractere();

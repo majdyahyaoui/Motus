@@ -17,12 +17,14 @@ export class Bloc2Component implements OnInit ,OnChanges{
 
   ngOnChanges(){
     this.decrementerTempsGlobal(this.data.temps)
+    this.fin(this.data.resultatMotReussi)
+
   }
 
-  public incrementerMotsReussi() {
+  incrementerMotsReussi() {
     // this.motReussi += 1;
   }
-  public decrementerTempsGlobal(temps : number)  {
+  decrementerTempsGlobal(temps : number)  {
 
     setInterval(
       ()=> {
@@ -30,14 +32,20 @@ export class Bloc2Component implements OnInit ,OnChanges{
       this.temps = Math.floor(temps / 60)+':'+Math.floor(temps % 60) ;
       },
       1 * 1000);
-      // if(this.data.resultatMotReussi >= 7){
-      //   alert("BRAVO");
-      // }
-      // else{
-      //   alert("A LA PROCHAINE")
-      // }
-
-
   }
+
+  fin(nb : number){
+    setTimeout(function(){
+      if( nb >= 7){
+        alert("BRAVO");
+      }
+      else{
+        alert("A LA PROCHAINE")
+      }
+    }, 600000);
+  }
+
+
+
 
 }
