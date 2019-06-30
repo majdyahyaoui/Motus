@@ -22,18 +22,22 @@ export class Bloc5Component implements OnInit {
   // }
   essayer(form : NgForm){
     var essai = form.value.essai ;
-    if (!(this.data.nbMots == 9 && this.data.nbEssais == 4 || this.data.nbMots == 10 && this.data.motActuelle == this.data.motTab[9] )){
-      this.data.nbEssais ++ ;
-      this.afficherGrille(essai);
+    if(this.verifierMotaSeptt(essai)){
+      if (!(this.data.nbMots == 9 && this.data.nbEssais == 4 || this.data.nbMots == 10 && this.data.motActuelle == this.data.motTab[9] )){
+        this.data.nbEssais ++ ;
+        this.afficherGrille(essai);
 
-    }else{
+      }else{
 
-      if(this.data.resultatMotReussi >= 7){
-        alert("BRAVO")
+        if(this.data.resultatMotReussi >= 7){
+          alert("BRAVO")
+        }
+        else(alert("A LA PROCHAINE"))
       }
-      else(alert("A LA PROCHAINE"))
+      this.emetter5.emit(this.data) ;
     }
-    this.emetter5.emit(this.data) ;
+    else{}
+
 
 
   }
@@ -117,12 +121,25 @@ export class Bloc5Component implements OnInit {
       [['y',"exist"], ['z',"exist"] ]];
   }
 
-  verifierMotaSept(input : any){
+  verifierMotaSept(input : any) : boolean{
     if(input.value.length == 7){
       this.border = "vert" ;
+      return true ;
     }
     else{
       this.border = "rouge" ;
+      return false ;
+    }
+  }
+
+  verifierMotaSeptt(input : any) : boolean{
+    if(input.length == 7){
+      this.border = "vert" ;
+      return true ;
+    }
+    else{
+      this.border = "rouge" ;
+      return false ;
     }
   }
 }
